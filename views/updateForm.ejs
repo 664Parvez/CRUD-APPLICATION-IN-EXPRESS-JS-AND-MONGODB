@@ -1,0 +1,82 @@
+<%-include('./partials/header.ejs') %>
+
+<!--  -->
+
+    <div class="container py-5">
+
+        <h2 class="text-center mb-5 text-success">Update User Data</h2>
+        <form action="/update-user/<%= data._id %>" method="POST"  class="needs-validation" novalidate> 
+            <div class="row">
+                <div class="col-lg-6">
+                    <label for="fname" class="form-label">First Name</label>
+                    <input type="text" id="fname" class="form-control" name="firstName" placeholder="First Name" required value="<%= data.firstName%>">
+                        <div class="valid-feedback">
+                            Filled Up
+                        </div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="lname" class="form-label">Last Name</label>
+                    <input type="text" id="lname" class="form-control" name="lastName" placeholder="Last Name" required value="<%= data.lastName%>">
+                    <div class="valid-feedback">
+                        Filled Up
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label for="lname" class="mt-4 form-label">Email</label>
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Email" required value="<%= data.email%>">
+                    <div class="valid-feedback">
+                        Filled Up
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="mt-4">Select Gender</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="Male" required <%= data.gender == "Male" ? checked : "" %>>
+                            <label class="form-check-label" for="Male" class="form-label">
+                                Male
+                            </label>
+                            <div class="valid-feedback">
+                                You must select your Gender before submitted
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="Female" required <%= data.gender == "Female" ? checked : "" %> >
+                            <label class="form-check-label" for="Female" class="form-label">
+                                Female
+                            </label>
+                            <div class="valid-feedback">
+                                You must select your Gender before submitted
+                            </div>
+                        </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="mt-4">Select Your Status</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="status" value="Active" id="Active" <%= data.status == "Active" ? checked : "" %>>
+                            <label class="form-check-label" for="Active" class="form-label">
+                                Active
+                            </label>
+                            <div class="valid-feedback">
+                                You must select your Status before submitted
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Inactive" name="status" id="Inactive" <%= data.status == "Inactive" ? checked : "" %>>
+                            <label class="form-check-label" for="Inactive" class="form-label">
+                                Inactive
+                            </label>
+                            <div class="valid-feedback">
+                                You must select your Status before submitted
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-danger my-5">Update Data</button>
+            </div>
+        </form>
+
+    </div>
+
+
+    <%-include('./partials/bottom.ejs') %>

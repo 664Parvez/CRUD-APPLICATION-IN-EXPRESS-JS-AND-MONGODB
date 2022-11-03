@@ -1,0 +1,18 @@
+-------- Back End Language --------
+1. Node JS
+
+-------- Database --------
+1. MongoDB
+
+-------- Packages / Modules --------
+1. express ( Node js framework )
+2. mongoose
+3. ejs
+4. nodemon
+5. dotenv
+6. express session
+7. multer ( Image Uploading )
+
+-------- For Front End --------
+1. BootStrap
+2. Font-awesome

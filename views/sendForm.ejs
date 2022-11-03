@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('./partials/header.ejs') %>
+<body>
+    
+    <div class="container py-5">
+
+        <h2 class="text-center mb-5 text-success">Insert New User</h2>
+        <form action="/user" method="POST" class="needs-validation" novalidate>
+            <div class="row">
+                <div class="col-lg-6">
+                    <label for="fname" class="form-label">First Name</label>
+                    <input type="text" id="fname" class="form-control" name="fastName" placeholder="First Name" required>
+                        <div class="valid-feedback">
+                            Filled Up
+                        </div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="lname" class="form-label">Last Name</label>
+                    <input type="text" id="lname" class="form-control" name="lastName" placeholder="Last Name" required>
+                    <div class="valid-feedback">
+                        Filled Up
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label for="lname" class="mt-4 form-label">Email</label>
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
+                    <div class="valid-feedback">
+                        Filled Up
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="mt-4">Select Gender</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" value="male" id="Male" checked required>
+                            <label class="form-check-label" for="Male" class="form-label">
+                                Male
+                            </label>
+                            <div class="valid-feedback">
+                                You must select your Gender before submitted
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" value="female" id="Female" required>
+                            <label class="form-check-label" for="Female" class="form-label">
+                                Female
+                            </label>
+                            <div class="valid-feedback">
+                                You must select your Gender before submitted
+                            </div>
+                        </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="mt-4">Select Your Status</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="status" value="active" id="Active">
+                            <label class="form-check-label" for="Active" class="form-label">
+                                Active
+                            </label>
+                            <div class="valid-feedback">
+                                You must select your Status before submitted
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="inactive" name="status" id="Inactive" checked>
+                            <label class="form-check-label" for="Inactive" class="form-label">
+                                Inactive
+                            </label>
+                            <div class="valid-feedback">
+                                You must select your Status before submitted
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary my-5">Insert Data</button>
+            </div>
+        </form>
+
+    </div>
+
+    <%-include('./partials/bottom.ejs') %>
+</body>
+</html>
